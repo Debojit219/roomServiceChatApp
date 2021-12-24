@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-roomService</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/indexStyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs')-%>
+    <div class="loginArea-fluid">
+        <div class="row">
+            <div class="col">
+                <img src="images/conversation.png" alt="">
+            </div>
+            <div class="col">
+                <div class="loginArea">
+                    <div class="box"></div>
+                    <div class="loginArea-forms">
+                        <div class="loginArea-info">
+                            <div class="info-item">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <p class="heading">
+                                            Create Room
+                                        </p>
+                                        <div class="btn">
+                                            Create it!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <p class="heading">
+                                            Join Room
+                                        </p>
+                                        <div class="btn">
+                                            Join it!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="loginArea-form">
+                            <div class="form-item log-in">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <form action="/room" method="post">
+                                            <input id="createUserName" name="Username" placeholder="Username" type="text" autocomplete="off" autofocus required/>
+                                            <input id="createRoomID" name="meetingTitle" placeholder="Meeting Title" type="text" autocomplete="off" autofocus/>
+                                            <button type="submit" class="btn">
+                                                Create
+                                            </button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item sign-up">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <form action="/joinRoom" method="post">
+                                            <input id="joinUserName" name="Username" placeholder="Username" type="text" autocomplete="off" required/>
+                                            <input id="joinRoomID" name="roomID" placeholder="Room ID" type="text" autocomplete="off" required/>
+                                            <button type="submit" class="btn">
+                                                Join Room
+                                            </button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+
+</html>

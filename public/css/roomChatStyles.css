@@ -1,0 +1,90 @@
+body {
+	background: #E5DDD5 url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png") fixed;
+}
+
+/* *******header******* */
+.page-header {
+	background: #5356ad;
+	margin: 0;
+	padding: 20px 0 10px;
+	color: #FFFFFF;
+	position: fixed;
+	width: 100%;
+	z-index: 1
+}
+
+#darkModeImg {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 40%;
+	right: 20px;
+}
+
+.main {
+	height: 100vh;
+	padding-top: 70px;
+}
+
+.chat-log {
+	padding: 40px 0 114px;
+	height: auto;
+	overflow: auto;
+	/* overflow: hidden; */
+	/* overflow-y: scroll; */
+}
+
+.chat-log__item {
+	background: #fafafa;
+	padding: 10px;
+	margin: 20px auto 20px 0;
+	max-width: 80%;
+	word-wrap: break-word;
+	/* float: left; */
+	height: fit-content;
+	width: fit-content;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	clear: both;
+}
+
+.chat-log__item.chat-log__item--own {
+	/* float: right; */
+	margin: 20px 0 20px auto;
+	height: fit-content;
+	width: fit-content;
+	background: #DCF8C6;
+	text-align: right;
+}
+
+.chat-form {
+	background: #DDDDDD;
+	padding: 40px 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.chat-log__author {
+	margin: 0 auto .5em;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.yellow-box {
+	text-align: center;
+	padding-left: 1%;
+	padding-right: 1%;
+	border-radius: 10px;
+	background-color: #FFE194;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	width: fit-content;
+}
+
+.btn {
+	background-color: #5356ad;
+	;
+}
