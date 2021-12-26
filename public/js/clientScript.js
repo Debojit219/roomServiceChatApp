@@ -1,4 +1,4 @@
-const socket = io('https://roomservice-chatapp.herokuapp.com/')
+const socket = io();
 
 const messageForm = document.getElementById("send-container")
 const msgInput = document.getElementById("messageInput")
