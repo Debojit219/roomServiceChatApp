@@ -1,4 +1,4 @@
-const socket = io(process.env.PORT || "http://localhost:3000")
+const socket = io('https://roomservice-chatapp.herokuapp.com/')
 
 const messageForm = document.getElementById("send-container")
 const msgInput = document.getElementById("messageInput")
