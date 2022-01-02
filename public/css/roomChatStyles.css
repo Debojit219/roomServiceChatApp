@@ -1,5 +1,5 @@
 body {
-	background: #E5DDD5 url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png") fixed;
+	/* background: #E5DDD5 url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png") fixed; */
 }
 
 /* *******header******* */
@@ -24,12 +24,13 @@ body {
 .main {
 	height: 100vh;
 	padding-top: 70px;
+	overflow: scroll;
 }
 
 .chat-log {
 	padding: 40px 0 114px;
 	height: auto;
-	overflow: auto;
+	/* overflow: auto; */
 	/* overflow: hidden; */
 	/* overflow-y: scroll; */
 }
@@ -79,12 +80,13 @@ body {
 	background-color: #FFE194;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 1%;
-	margin-bottom: 1%;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
 	width: fit-content;
 }
 
 .btn {
-	background-color: #5356ad;
-	;
+	text-align: center;
+	color: #5356ad;
+	border-color: #5356ad;
 }

@@ -21,6 +21,7 @@ app.use(express.urlencoded({
 app.use(express.static('public'));
 
 app.get("/", function (req, res) {
+    console.log("rendering index");
     res.render("index");
 })
 app.get("/about", function(req,res){

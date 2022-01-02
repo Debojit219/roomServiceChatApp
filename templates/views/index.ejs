@@ -6,22 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-roomService</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/indexStyles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
     <%- include('../partials/navbar.ejs')-%>
-    <div class="loginArea-fluid">
+    <div section="MainContent" class="Content">
         <div class="row">
-            <div class="col">
-                <img src="images/conversation.png" alt="">
+            <div class="col-lg-6 col">
+                <img class="image" src="images/conversation.png" alt="">
             </div>
-            <div class="col">
+            <div class="col-lg-6 col loginDiv">
                 <div class="loginArea">
-                    <div class="box"></div>
                     <div class="loginArea-forms">
                         <div class="loginArea-info">
                             <div class="info-item">
@@ -30,7 +29,7 @@
                                         <p class="heading">
                                             Create Room
                                         </p>
-                                        <div class="btn">
+                                        <div class="btn btnCreate">
                                             Create it!
                                         </div>
                                     </div>
@@ -42,7 +41,7 @@
                                         <p class="heading">
                                             Join Room
                                         </p>
-                                        <div class="btn">
+                                        <div class="btn btnJoin">
                                             Join it!
                                         </div>
                                     </div>
@@ -74,7 +73,6 @@
                                                 Join Room
                                             </button>
                                         </form>
-
                                     </div>
                                 </div>
                             </div>

@@ -11,13 +11,12 @@ const meetingTitle = urlParams.get('meetingTitle');
 console.log(userName + "client");
 
 function scrollToBottom() {
-    console.log($(".container")[1]);
-    // msgContainer.scrollTop = msgContainer.scrollHeight;
-    var div=$(".container")[1];
-    div.scrollTop = div.scrollHeight;
-    // $(".container")[1].animate({
-    //     scrollTop: $(".container")[1].scrollHeight
-    // }, 1000);
+    console.log(("Scroller"));
+    // $("#chatContainer.chat-log").css('background-color','red');
+    // console.log($(".main")[0]);
+    // console.log($(".main")[0].scrollHeight+" "+$(".main")[0].clientHeight+" "+$(".main")[0].scrollTop);
+    // $("#chatContainer")[0].animate({scrollTop:$("#chatContainer")[0].height()}, 'slow');
+    $(".main")[0].scrollTop = $(".main")[0].scrollHeight-$(".main")[0].clientHeight;;
 }
 
 appendNewUser("You Joined")
@@ -81,20 +80,17 @@ function appendMessage(data) {
     toBeAppended.append(sentText)
 
     //final div appending
-    var shouldScroll = msgContainer.scrollTop + msgContainer.clientHeight === msgContainer.scrollHeight;
+    // var shouldScroll = msgContainer.scrollTop + msgContainer.clientHeight === msgContainer.scrollHeight;
     msgContainer.append(toBeAppended)
-    if (!shouldScroll) {
         scrollToBottom();
-    }
 }
 
 function appendNewUser(userName) {
     const newUserInfoDiv = document.createElement("div");
     newUserInfoDiv.className = "yellow-box"
     newUserInfoDiv.innerText = userName
-    var shouldScroll = msgContainer.scrollTop + msgContainer.clientHeight === msgContainer.scrollHeight;
+    // var shouldScroll = msgContainer.scrollTop + msgContainer.clientHeight === msgContainer.scrollHeight;
     msgContainer.append(newUserInfoDiv)
-    if (!shouldScroll) {
+    
         scrollToBottom();
-    }
 }

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NavBar</title>
-  
+
   <link rel="stylesheet" href="css/navbarCss.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -14,33 +14,29 @@
 </head>
 
 <body>
-  <div id="home">
-    <header class="hero">
-      <nav class="navbar">
-        <h1 class="logo">
-          <a href="/">room Service <i class="fas fa-user-secret"></i></a>
-        </h1>
-        <div>
-          <!-- --------------------------------------
-              -------- Hamburger Links ------------
-              --------------------------------------- -->
-          <div class="nav-menu">
-            <!-- Header icons -->
-            <a href="/" class="nav-link">Home</a>
-            <a href="/about" class="nav-link">About</a>
-          </div>
 
-          <!-- --------------------------------------
-              ---------- Hamburger button ---------------
-              --------------------------------------- -->
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
-    </header>
+  <header class="header">
+    <a href="/" class="logo">room Service<i class="fas fa-user-secret"></i></a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/about" class="nav-link">About</a></li>
+    </ul>
+  </header>
 </body>
 
 </html>
+
+
+<!-- <header class="header">
+  <a href="/">room Service <i class="fas fa-user-secret"></i></a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/" class="nav-link">Home</a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
+    <li><a href="#careers">Careers</a></li> -->
+<!-- <li><a href="#contact">Contact</a></li> -->
+<!-- </ul>
+</header> -->

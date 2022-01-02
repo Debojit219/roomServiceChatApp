@@ -1,176 +1,140 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Main Styling */
 body {
-  font-family: "Nunito Sans", sans-serif;
-  line-height: 1.6;
-  color: #fff;
-}
-
-p {
-  margin: 10px 0;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  /* background-color: #f4f4f4; */
 }
 
 a {
-  text-decoration: none;
-  color: #333;
+  color: #000;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-  padding: 2rem;
-}
+/* header */
 
-section > * {
-  margin: 0 auto;
-  max-width: 1000px;
-}
-
-/* Section colors */
-section:nth-child(1) {
-   background: black;
- }
-section:nth-child(2) {
-  background: red;
-}
-section:nth-child(3) {
-   background: orangered;
- }
-section:nth-child(4) {
-  background: blueviolet;
-}
-section:nth-child(5) {
-   background: palevioletred;
- }
-
-/* Navbar Styling */
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 80px;
-  background-color: #f4f4f4;
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: fixed;
-  top: 0;
-  padding: 1.25rem;
+  width: 100%;
+  z-index: 3;
 }
 
-.navbar .logo {
-  padding: 1.5rem;
-  font-size: 2rem;
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
 }
 
-.navbar .logo a {
-  transition: color 0.4s ease-in-out;
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
 }
 
-.navbar .logo a:hover {
-  color: #4c6ca0;
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
 }
 
-.navbar .nav-menu {
-  display: flex;
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-.nav-menu .nav-link {
-   margin: 0 1rem;
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
 }
 
-.nav-menu .nav-link:hover {
-   color: #4c6ca0;
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
 }
 
-/* Navbar icons */
-.nav-menu .nav-link .nav-icon {
-   margin-right: 0.3rem;
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
 }
 
-.hamburger {
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
   display: none;
 }
 
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  border-radius: 30px;
-  background-color: #101010;
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
 }
 
-/* Responsive */
-@media only screen and (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    /* 
-      You can change the position of the navbar 
-      ----------------------------------------------------------------------------------
-      To succesfully do this, you must change the .nav-menu.active to the chosen position
-      * right: -100%;
-      * .right-menu.active { right: 0;}
-      -----------------------------------------------------------------------------------
-    */
-    right: -100vw;
-    top: 4rem;
-    flex-direction: column;
-    /* This controls the width of the navbar container*/
-    min-width: 400px;
-    text-align: right;
-    transition: 0.3s;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    /* This controls the background color of the navbar container*/
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-  }
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
 
-  .nav-menu.active {
-    right: 20px;
-  }
-  
-  .nav-menu .nav-link {
-     padding: 0.6rem 0;
-     font-size: 1.05rem;
-  }
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
 
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    padding: 0.2rem 0.4rem;
-  }
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
 
-  .hamburger:hover {
-     background: rgb(233, 231, 231);
-  }
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
 
-  .hamburger.active {
-     border: 1px dotted gray;
-  }
+/* 48em = 768px */
 
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+@media (min-width: 48em) {
+  .header li {
+    float: left;
   }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  .header li a {
+    padding: 20px 30px;
   }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
   }
 }

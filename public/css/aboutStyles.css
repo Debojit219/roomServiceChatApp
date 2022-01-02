@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
-
+.Content {
+  padding-top: 0%;
+}
 body {
   position: absolute;
   left: 0;
@@ -27,9 +29,8 @@ body {
 }
 
 .col {
-  flex: 50%;
   text-align: center;
-  margin-top: 10%;
+  padding: 10% 2%;
 }
 
 .small {
@@ -42,4 +43,7 @@ body {
   text-align: center;
   margin: 5%;
   padding: 2%;
+}
+.image {
+  width: 90%;
 }
